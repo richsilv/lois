@@ -1,0 +1,28 @@
+<template name="Makers">
+
+	<div class="background-colour" style="background-color: {{background_colour}}"></div>
+
+	<div class="main-page">
+		
+		<div class="top-bar w-1-5 grow-1 flexbox v-center h-center no-h-margin">
+			<div class="item w-1-4"><div class="background-ellipse {{colour}} fade-out triple-size"><a href="">LOIS</a></div></div>
+		</div>
+		
+		<div class="maker-page flexbox v-stretch a-stretch">
+			<div class="w-2-5 grow-1 flexbox v-center no-h-margin">
+				<video>
+				  <source src="videos/cat-video.mp4" type="video/mp4">
+				  Your browser does not support the video tag.
+				</video>				
+			</div>
+		</div>
+
+		<div class="footer w-1-5 grow-1 flexbox h-center v-center">
+			<div class="item w-auto"><div class="background-ellipse {{colour}} fade-out"><a href="" data-action="change-image">Switch Image</a></div></div>
+			<div class="item w-auto"><div class="background-ellipse {{colour}} fade-out"><a href="" data-action="change-colour">Switch Color</a></div></div>
+			<div class="item w-auto"><div class="background-ellipse {{colour}} fade-out"><a href="" data-action="change-icons">Switch Icons</a></div></div>	
+		</div>
+
+	</div>
+
+</template>

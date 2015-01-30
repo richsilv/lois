@@ -11,4 +11,5 @@ Router.configure({
 
 Router.map(function () {
 	this.route('home', {path: '/'});
+  	this.route('makers', {path: '/makers'});
 });
