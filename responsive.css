@@ -1,0 +1,107 @@
+.show-for-small-screen {
+  display: none; }
+  @media only screen and (max-width: 640px) {
+    .show-for-small-screen {
+      display: initial; } }
+
+.show-for-phone-up {
+  display: none; }
+  @media only screen {
+    .show-for-phone-up {
+      display: initial; } }
+
+.show-for-tablet-up {
+  display: none; }
+  @media only screen and (min-width: 1015px) {
+    .show-for-tablet-up {
+      display: initial; } }
+
+.show-for-desktop-up {
+  display: none; }
+  @media only screen and (min-width: 1240px) {
+    .show-for-desktop-up {
+      display: initial; } }
+
+.show-for-pixany-up {
+  display: none; }
+  @media (orientation: portrait) {
+    .show-for-pixany-up {
+      display: initial; } }
+
+.show-for-pix150-up {
+  display: none; }
+  @media (min-resolution: 150dppx) and (orientation: portrait) {
+    .show-for-pix150-up {
+      display: initial; } }
+
+.show-for-pix200-up {
+  display: none; }
+  @media (min-resolution: 200dppx) and (orientation: portrait) {
+    .show-for-pix200-up {
+      display: initial; } }
+
+.show-for-pix250-up {
+  display: none; }
+  @media (min-resolution: 250dppx) and (orientation: portrait) {
+    .show-for-pix250-up {
+      display: initial; } }
+
+.show-for-pix300-up {
+  display: none; }
+  @media (min-resolution: 300dppx) and (orientation: portrait) {
+    .show-for-pix300-up {
+      display: initial; } }
+
+.hide-for-small-screen {
+  display: initial; }
+  @media only screen and (max-width: 640px) {
+    .hide-for-small-screen {
+      display: none; } }
+
+.hide-for-phone-up {
+  display: initial; }
+  @media only screen {
+    .hide-for-phone-up {
+      display: none; } }
+
+.hide-for-tablet-up {
+  display: initial; }
+  @media only screen and (min-width: 1015px) {
+    .hide-for-tablet-up {
+      display: none; } }
+
+.hide-for-desktop-up {
+  display: initial; }
+  @media only screen and (min-width: 1240px) {
+    .hide-for-desktop-up {
+      display: none; } }
+
+.hide-for-pixany-up {
+  display: initial; }
+  @media (orientation: portrait) {
+    .hide-for-pixany-up {
+      display: none; } }
+
+.hide-for-pix150-up {
+  display: initial; }
+  @media (min-resolution: 150dppx) and (orientation: portrait) {
+    .hide-for-pix150-up {
+      display: none; } }
+
+.hide-for-pix200-up {
+  display: initial; }
+  @media (min-resolution: 200dppx) and (orientation: portrait) {
+    .hide-for-pix200-up {
+      display: none; } }
+
+.hide-for-pix250-up {
+  display: initial; }
+  @media (min-resolution: 250dppx) and (orientation: portrait) {
+    .hide-for-pix250-up {
+      display: none; } }
+
+.hide-for-pix300-up {
+  display: initial; }
+  @media (min-resolution: 300dppx) and (orientation: portrait) {
+    .hide-for-pix300-up {
+      display: none; } }
