@@ -133,6 +133,10 @@
     -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
+  .flexbox.wrap:not(.column) {
+    max-width: 100%; }
+  .flexbox.wrap.column {
+    max-height: 100%; }
   .flexbox.h-end {
     -webkit-box-pack: end;
     -moz-box-pack: end;
