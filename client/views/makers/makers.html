@@ -11,19 +11,19 @@
 		</div>
 
 		<div class="maker-info container">
-			<div class="flexbox wrap v-top">
-				<div class="w-1-4 m-1-2-- shrink-1 grow-1">
-					<div class="flexbox no-h-margin column">
+			<div class="flexbox wrap v-top extra-padding">
+				<div class="w-1-4 m-2-5 shrink-1 grow-1">
+					<div class="flexbox no-h-margin column no-overflow">
 						<video class="maker-video" autoplay>
 						  <source src="videos/cat-video.mp4" type="video/mp4">
 						  Your browser does not support the video tag.
 						</video>				
 					</div>
 				</div>
-				<div class="w-1-3 m-1-2-- shrink-5 grow-1">
-					<div class="maker-bio">{{bio}}</div>
-					<div class="centered"><div class="shop-button backing-box blue" data-action="change-colour"><span>Shop the Collection</span></div></div>
-					<div class="flexbox wrap maker-wares">
+				<div class="w-1-3 m-2-5 shrink-5 grow-1">
+					<div class="maker-bio no-overflow">{{bio}}</div>
+					<div class="centered no-overflow"><div class="shop-button backing-box blue" data-action="change-colour"><span>Shop the Collection</span></div></div>
+					<div class="flexbox wrap maker-wares no-overflow">
 						{{#each wares}}
 							<div>{{name}}</div>
 						{{/each}}

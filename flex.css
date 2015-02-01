@@ -144,11 +144,11 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
   .flexbox.wrap:not(.column) {
-    max-width: calc(100% + 2 * $gutter); }
+    max-width: calc(100% + 2 * 0.5em); }
     .flexbox.wrap:not(.column).no-h-margin, .flexbox.wrap:not(.column).no-margin {
       max-width: 100%; }
   .flexbox.wrap.column {
-    max-height: calc(100% + 2 * $gutter); }
+    max-height: calc(100% + 2 * 0.5em); }
     .flexbox.wrap.column.no-v-margin, .flexbox.wrap.column.no-margin {
       max-height: 100%; }
   .flexbox.h-end {
