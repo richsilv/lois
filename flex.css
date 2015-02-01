@@ -2,7 +2,8 @@
   max-width: 1015px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px !important; }
+  /* 	padding-left: 1em;
+  	padding-right: 1em; */ }
   .container.full-height {
     height: 100%;
     margin-top: 0 !important; }
@@ -74,6 +75,11 @@
   -moz-flex-basis: auto;
   flex-basis: auto;
   -ms-flex-preferred-size: auto; }
+  .flexbox > .flexbox {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0; }
   .flexbox.pad-top {
     margin-top: 0; }
   .flexbox > * {
@@ -93,8 +99,12 @@
     margin-top: 0;
     margin-bottom: 0; }
     .flexbox.no-v-margin > * > * {
-      padding-top: 0.5em;
-      padding-bottom: 0.5em; }
+      padding-top: 0;
+      padding-bottom: 0; }
+  .flexbox.no-margin {
+    margin: 0; }
+    .flexbox.no-margin > * {
+      padding: 0; }
   .flexbox.reverse {
     -webkit-box-orient: horizontal;
     -moz-box-orient: horizontal;
@@ -134,9 +144,13 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
   .flexbox.wrap:not(.column) {
-    max-width: 100%; }
+    max-width: calc(100% + 2 * $gutter); }
+    .flexbox.wrap:not(.column).no-h-margin, .flexbox.wrap:not(.column).no-margin {
+      max-width: 100%; }
   .flexbox.wrap.column {
-    max-height: 100%; }
+    max-height: calc(100% + 2 * $gutter); }
+    .flexbox.wrap.column.no-v-margin, .flexbox.wrap.column.no-margin {
+      max-height: 100%; }
   .flexbox.h-end {
     -webkit-box-pack: end;
     -moz-box-pack: end;
