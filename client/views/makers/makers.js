@@ -6,24 +6,63 @@ var colours = [
       'yellow',
       'lightgrey',
       'midgrey'
+    ],
+    products = [
+      {
+        name: Fake.word() + ' - ' + Fake.color(),
+        price: Math.floor(Math.random() * 3000) / 100,
+        image: 'images/products/Bread.jpg',
+      },
+      {
+        name: Fake.word() + ' - ' + Fake.color(),
+        price: Math.floor(Math.random() * 3000) / 100,
+        image: 'images/products/Fresh.jpg',
+      },
+      {
+        name: Fake.word() + ' - ' + Fake.color(),
+        price: Math.floor(Math.random() * 3000) / 100,
+        image: 'images/products/Selection_of_garden_birds_teatowel.jpg',
+      },
+      {
+        name: Fake.word() + ' - ' + Fake.color(),
+        price: Math.floor(Math.random() * 3000) / 100,
+        image: 'images/products/blue-green+ring3.jpg',
+      },
+      {
+        name: Fake.word() + ' - ' + Fake.color(),
+        price: Math.floor(Math.random() * 3000) / 100,
+        image: 'images/products/cire+clutch.jpg',
+      },
+      {
+        name: Fake.word() + ' - ' + Fake.color(),
+        price: Math.floor(Math.random() * 3000) / 100,
+        image: 'images/products/il+pleut+silver1.jpg',
+      },
+      {
+        name: Fake.word() + ' - ' + Fake.color(),
+        price: Math.floor(Math.random() * 3000) / 100,
+        image: 'images/products/jug.jpg',
+      },
+      {
+        name: Fake.word() + ' - ' + Fake.color(),
+        price: Math.floor(Math.random() * 3000) / 100,
+        image: 'images/products/navy-yellow+ring2.jpg',
+      },
+      {
+        name: Fake.word() + ' - ' + Fake.color(),
+        price: Math.floor(Math.random() * 3000) / 100,
+        image: 'images/products/peaks+studs.jpg',
+      },
+      {
+        name: Fake.word() + ' - ' + Fake.color(),
+        price: Math.floor(Math.random() * 3000) / 100,
+        image: 'images/products/saturn+studs.jpg'
+      },
     ];
 
-Template.Makers.events({
-  'click [data-action="change-colour"]': function(evt, tmp) {
-    var max = colours.length,
-      newInd = (tmp.colourNum.get() + 1) % max;
-    tmp.colourNum.set(newInd);
-  },
-});
-
 Template.Makers.helpers({
-  backgroundColour: function () {
-    var instance = Template.instance();
-    return colours[instance.colourNum.get()];
-  },
-  nonBackgroundColour: function () {
-    var instance = Template.instance();
-    return colours[(instance.colourNum.get() + 1) % 2];
+  products: function() {
+    return products;
   }
 });
 
@@ -31,7 +70,6 @@ Template.Makers.helpers({
 /* Makers: Lifecycle Hooks */
 /*****************************************************************************/
 Template.Makers.created = function () {
-  this.colourNum = new ReactiveVar(0);
 };
 
 Template.Makers.rendered = function () {
