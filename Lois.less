@@ -1,6 +1,8 @@
 /*****************************************************************************/
 /* Global CSS Styles */
 /*****************************************************************************/
+@import "prefixer";
+
 @black: #222222;
 @yellow: #fbd027;
 @blue: #19aed5;
@@ -314,7 +316,8 @@ html {
 		font-size: 3em;
 		top: -100%;
 		left: 50%;
-		transform: translateX(-50%);
+		.transform(translateX(-50%));
+
 		z-index: 0;
 		opacity: 0.66;
 	}
@@ -341,7 +344,7 @@ html {
 	}
 
 	&.fade-out:after {
-		transition: opacity 1s;
+		.transition(opacity 1s);
 	}
 
 	&.fade-out:hover:after, &.fade-out:focus:after, &.fade-out:active:after {
@@ -357,11 +360,9 @@ html {
 		-webkit-perspective: 1000;
 		perspective: 1000;
 		-moz-osx-font-smoothing: grayscale;
-		transition: transform 0.5s;
+		.transition(transform 0.5s);
 		&:hover {
-		    -ms-transform: scale(1.1);
-		    -webkit-transform: scale(1.1);
-		    transform: scale(1.1);
+		    .transform(scale(1.1));
 		}
 	}
 }
