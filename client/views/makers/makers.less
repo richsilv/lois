@@ -41,7 +41,13 @@
 .maker-products {
 	.product {
 		flex-basis: 225px;
+	    -webkit-flex-basis: 225px;
+	    -moz-flex-basis: 225px;
+	    -ms-flex-preferred-size: 225px;
 		flex-grow: 1;
+	    -webkit-flex-grow: 1;
+	    -moz-flex-grow: 1;
+	    -ms-flex-positive: 1;
 		img {
 			max-width: 100%;
 		}
@@ -69,6 +75,7 @@
 		padding-bottom: @padding;
 		> * {
 			flex: 1;
+			-webkit-flex: 1;
 		}
 	}
 	&.wrap:not(.column) {
