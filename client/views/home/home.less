@@ -1,3 +1,107 @@
 /*****************************************************************************/
 /* Home: Style */
 /*****************************************************************************/
+@yellow: #f8e71c;
+@black: #222;
+@white: #ffffff;
+@darkgrey: #444444;
+@lightgrey: #eeeeee;
+
+.splash-image {
+	img {
+		width: 100%;
+	}
+}
+
+.splash-button {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+}
+
+@top-menu-height: 5.3vw;
+
+.top-spacer {
+	height: @top-menu-height * 1.075;
+	background-color: @white;
+}
+
+.top-menu {
+	width: 100%;
+	text-align: center;
+	height: @top-menu-height;
+	background-color: @lightgrey;
+	color: @darkgrey;
+	position: relative;
+
+	.menu-items {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		height: 100%;
+		font-size: 2.3vw;
+
+		.item {
+			display: table-cell;
+			height: 100%;
+			vertical-align: middle;
+		}
+	}
+
+	.centered-button {
+		margin-top: @top-menu-height * -0.5;
+	}
+
+	.slashes {
+		position: absolute;
+		color: @white;
+		font-size: @top-menu-height;
+		left: 9.35vw;
+	}
+}
+
+.centered-button {
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+
+	&.yellow {
+		background-color: @yellow;
+		width: 28vw;
+		height: 28vw;
+
+		.button-text {
+			color: @black;
+			font-size: 6.5vw;		
+		}
+	}
+
+	.button-text {
+		margin-top: 50%;
+		transform: translateY(-50%);			
+	}
+
+	&.white {
+		background-color: @white;
+		width: 10.5vw;
+		height: 10.5vw;
+		border: 0.3vw solid @darkgrey;
+
+		.button-text {
+			color: @black;
+			font-size: 2.3vw;		
+		}			
+	}
+}
+
+.splash-image {
+	height: 125vh;
+	overflow: hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+
+}

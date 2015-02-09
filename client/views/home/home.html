@@ -1,35 +1,37 @@
 <template name="Home">
 
-	<div class="background-image" style="background-image: url('images/{{image}}')"></div>
+	<div class="top-spacer"></div>
 
-	<div class="main-page landing-page">
-		
-		<div class="top-bar w-1-5 grow-1 flexbox v-center h-center no-h-margin">
-			<div class="item w-1-8 show-for-tablet-up"><div class="background-ellipse {{colour}} fade-out"><a href="">About</a></div></div>
-			<div class="item w-1-8 show-for-tablet-up"><div class="background-ellipse {{colour}} fade-out"><a href="">{{#if icons}}<i class="icon-twitter"></i>{{else}}Twitter{{/if}}</a></div></div>
-			<div class="item w-1-8 show-for-tablet-up"><div class="background-ellipse {{colour}} fade-out"><a href="">{{#if icons}}<i class="icon-instagram"></i>{{else}}Instagram{{/if}}</a></div></div>
-			<div class="item w-1-4"><div class="background-ellipse {{colour}} fade-out triple-size"><a href="">LOIS</a></div></div>
-			<div class="item w-3-8 show-for-tablet-up"><div class="background-ellipse {{colour}} fade-out"><a href="">Sign up to the newsletter</a></div></div>
-		</div>
-		
-		<div class="splash-menu flexbox column v-stretch a-stretch">
-			<div class="w-3-5 grow-3 flexbox v-center no-h-margin">
-				<div class="grow-1 shrink-1 w-0 show-for-tablet-up"></div>
-				<div class="grow-2 shrink-0 w-auto flexbox wrap pad-sides">
-					<div class="item grow-1 w-0 flexbox column v-center h-center freeform-for-phone-10em"><a class="white centered" href=""><div class="huge-text">Design</div><div>shop the collection</div></a></div>
-					<div class="item grow-1 w-0 flexbox column v-center h-center freeform-for-phone-10em"><a class="white centered"  href=""><div class="huge-text">Made</div><div>meet the designers</div></a></div>
-					<div class="item grow-1 w-0 flexbox column v-center h-center freeform-for-phone-10em"><a class="white centered"  href=""><div class="huge-text">Awesome</div><div>coming soon!</div></a></div>
-				</div>
-				<div class="grow-1 shrink-1 w-0 show-for-tablet-up"></div>
-			</div>
+	<div class="top-menu">
+		<div class="slashes"><i class="icon-lois-slashes"></i></div>
+
+		<div class="menu-items">
+			<div class="left item">shop</div>
+			<div class="right item">makers</div>
 		</div>
 
-		<div class="footer w-1-5 grow-1 flexbox h-center v-center">
-			<div class="item w-auto"><div class="background-ellipse {{colour}} fade-out"><a href="" data-action="change-image">Switch Image</a></div></div>
-			<div class="item w-auto"><div class="background-ellipse {{colour}} fade-out"><a href="" data-action="change-colour">Switch Color</a></div></div>
-			<div class="item w-auto"><div class="background-ellipse {{colour}} fade-out"><a href="" data-action="change-icons">Switch Icons</a></div></div>	
+		<div class="centered-button white">
+			<div class="button-text">L O I S</div>
 		</div>
 
 	</div>
+
+	<div class="splash-image" style="background-image: url('images/homepage_header_image.jpg');"></div>
+
+	<div class="splash-button"><div class="centered-button yellow"><div class="button-text">Design</div></div></div>
+
+	<div class="splash-image" style="background-image: url('images/homepage_design_section.jpg');"></div>
+
+	<div class="splash-button"><div class="centered-button yellow"><div class="button-text">Made</div></div></div>
+
+	<div class="splash-image" style="background-image: url('images/homepage_made_section.jpg');"></div>
+
+	<div class="splash-button"><div class="centered-button yellow"><div class="button-text">Fun</div></div></div>
+
+	<div class="splash-image" style="background-image: url('images/homepage_fun_section.jpg');"></div>
+
+	<div class="splash-social"></div>
+
+	<div class="splash-legal"></div>	
 
 </template>
