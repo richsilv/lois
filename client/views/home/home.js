@@ -8,7 +8,12 @@ Template.Home.rendered = function() {
 		vh = $(window).height() / 100,
 		vmax = Math.max(vw, vh),
 		topSectionFactor = (vh > vw && vw <= 3.2) ? 35 : 30,
-        tl = new TimelineLite({ paused: true });
+        tl = new TimelineLite({
+            paused: true,
+            onComplete: function() {
+                $('body').removeClass('no-scroll');
+            }
+        });
 
     tl.add( TweenLite.to('.top-spacer', 2, {height: topSectionFactor * vmax}) );
     tl.add( TweenLite.to('.lois-blurb', 1, {opacity: 1}) );
@@ -46,6 +51,7 @@ Template.Home.rendered = function() {
 
 	Meteor.setTimeout(function() {
         controller.scrollTo(0);
+        $('body').addClass('no-scroll');
         tl.delay(1).play();
     }, 500);
 };

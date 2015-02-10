@@ -10,6 +10,16 @@
 
 @import "prefixer.less";
 
+body {
+	overflow-x: hidden;
+
+	&.no-scroll {
+		overflow-y: scroll;
+		position: fixed;
+		width: 100%;
+	}
+}
+
 .splash-image {
 	img {
 		width: 100%;
