@@ -17,6 +17,7 @@ Template.Home.rendered = function() {
 
     tl.add( TweenLite.to('.top-spacer', 2, {height: topSectionFactor * vmax}) );
     tl.add( TweenLite.to('.lois-blurb', 1, {opacity: 1}) );
+    tl.add( TweenMax.to('.down-arrow .icon-arrow-down', 0.5, {opacity: 1, repeat: 3, yoyo: true}), '-=0.5' );
 
     new ScrollScene({offset: 0, duration: 400})
         .setTween(TweenLite.to('.lois-blurb', 1, {opacity: 0}) )
@@ -44,14 +45,17 @@ Template.Home.rendered = function() {
     new ScrollScene({offset: 1200, duration: 400})
     	.setTween(TweenLite.to('.top-menu .menu-items', 1, {opacity: 1}))
     	.addTo(controller);
+    new ScrollScene({offset: 1200, duration: 400})
+        .setTween(TweenLite.to('.lois-blurb', 1, {height: 0}))
+        .addTo(controller);
 
+    new ScrollScene({offset: 2200})
+        .setPin('.top-section')
+        .addTo(controller);
     new ScrollScene({duration: 2200})
 		.setPin('.splash-scene')
 		.addTo(controller);
-    new ScrollScene({offset: 2200})
-        .setPin('.top-section')
-        .addTo(controller);    
-
+  
 	Meteor.setTimeout(function() {
         controller.scrollTo(0);
         $('body').addClass('no-scroll');
