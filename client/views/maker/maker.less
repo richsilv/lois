@@ -7,6 +7,7 @@
 .container {
 	width: 100%;
 	max-width: @grid-width;
+	text-align: center;
 
 	&.top-space {
 		margin-top: 6vmax;
@@ -37,17 +38,23 @@
 	min-width: 300px;
 	text-align: center;
 
+	video {
+		max-width: 100%;
+	}
+
 }
 
 .blurb-section {
 
 	display: block;
+	text-align: left;
 	margin-top: 3vmax;
 	color: @blurb-color;
 	font-size: 2.5vmax;
 
 	.image {
-		max-width: @grid-width * 0.55;
+		width: @grid-width * 0.55;
+		max-width: 80%;
 		margin: 4vmax;
 
 		&.one {
