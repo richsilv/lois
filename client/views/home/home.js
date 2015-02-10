@@ -31,23 +31,26 @@ Template.Home.rendered = function() {
         .setTween(TweenLite.to('.top-menu .centered-button .button-text', 2, {'font-size': 2.3 * vmax}) )
         .addTo(controller);
 
-    new ScrollScene({offset: 1000, duration: 600})
+    new ScrollScene({offset: 200, duration: 800})
     	.setTween(TweenLite.to('.top-menu', 1, {height: 5.3 * vmax}))
     	.addTo(controller);
-    new ScrollScene({offset: 1000, duration: 600})
+    new ScrollScene({offset: 200, duration: 800})
     	.setTween(TweenLite.to('.top-menu .centered-button', 1, {top: 2.65 * vmax}))
     	.addTo(controller);
 
-    new ScrollScene({offset: 1600, duration: 600})
+    new ScrollScene({offset: 1000, duration: 600})
     	.setTween(TweenLite.to('.top-menu .menu-items .item', 1, {x: 0}))
     	.addTo(controller);
-    new ScrollScene({offset: 1800, duration: 400})
+    new ScrollScene({offset: 1200, duration: 400})
     	.setTween(TweenLite.to('.top-menu .menu-items', 1, {opacity: 1}))
     	.addTo(controller);
 
-    new ScrollScene({duration: 2800})
+    new ScrollScene({duration: 2200})
 		.setPin('.splash-scene')
 		.addTo(controller);
+    new ScrollScene({offset: 2200})
+        .setPin('.top-section')
+        .addTo(controller);    
 
 	Meteor.setTimeout(function() {
         controller.scrollTo(0);

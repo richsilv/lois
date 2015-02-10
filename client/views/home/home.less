@@ -34,87 +34,94 @@ body {
 
 @top-menu-height: 5.3vmax;
 
-.top-spacer {
-	height: @top-menu-height * 1.075;
-	background-color: @white;
+.top-section {
 
-	&.collapsible {
-		height: 18vmax;
+	z-index: 2;
 
-		.lois-blurb {
-			padding: 3.6vmax;
-			font-size: 3.5vmax;
-			line-height: 5.8vmax;
-			word-spacing: 0.5vmax;
-			letter-spacing: 0.08vmax;
-			.opacity(0);
+	.top-spacer {
+		height: @top-menu-height * 1.075;
+		background-color: @white;
+		z-index: 2;
+
+		&.collapsible {
+			height: 18vmax;
+
+			.lois-blurb {
+				padding: 3.6vmax;
+				font-size: 3.5vmax;
+				line-height: 5.8vmax;
+				word-spacing: 0.5vmax;
+				letter-spacing: 0.08vmax;
+				.opacity(0);
+			}
 		}
 	}
-}
 
-.top-menu {
-	width: 100%;
-	text-align: center;
-	height: @top-menu-height;
-	background-color: @lightgrey;
-	color: @darkgrey;
-	position: relative;
-
-	.menu-items {
-		display: table;
-		position: absolute;
-		table-layout: fixed;
+	.top-menu {
 		width: 100%;
-		height: 100%;
-		font-size: 2.3vmax;
-
-		.item {
-			display: table-cell;
-			height: 100%;
-			vertical-align: middle;
-		}
-	}
-
-	.centered-button {
-		margin-top: @top-menu-height * 0.5;
-		width: 10.5vmax;
-		height: 10.5vmax;
-
-		.button-text {
-			font-size: 2.3vmax;
-		}
-	}
-
-	.slashes {
-		position: absolute;
-		color: @white;
-		font-size: @top-menu-height;
-		max-height: 100%;
-		overflow-y: hidden;
-		left: 9.35vw;
-	}
-
-	&.collapsible {
-		height: 0;
+		text-align: center;
+		height: @top-menu-height;
+		background-color: @lightgrey;
+		color: @darkgrey;
+		position: relative;
+		z-index: 2;
 
 		.menu-items {
-			.opacity(0);
+			display: table;
+			position: absolute;
+			table-layout: fixed;
+			width: 100%;
+			height: 100%;
+			font-size: 2.3vmax;
 
-			.left {
-				.transform(translateX(-100%));
-			}
-			.right {
-				.transform(translateX(100%));
+			.item {
+				display: table-cell;
+				height: 100%;
+				vertical-align: middle;
 			}
 		}
 
 		.centered-button {
-			margin-top: 0;
-			width: 19.6vmax;
-			height: 19.6vmax;
+			margin-top: @top-menu-height * 0.5;
+			width: 10.5vmax;
+			height: 10.5vmax;
 
 			.button-text {
-				font-size: 4.3vmax;
+				font-size: 2.3vmax;
+			}
+		}
+
+		.slashes {
+			position: absolute;
+			color: @white;
+			font-size: @top-menu-height;
+			max-height: 100%;
+			overflow-y: hidden;
+			left: 9.35vw;
+		}
+
+		&.collapsible {
+			height: 0;
+
+			.menu-items {
+				.opacity(0);
+
+				.left {
+					.transform(translateX(-100%));
+				}
+				.right {
+					.transform(translateX(100%));
+				}
+			}
+
+			.centered-button {
+				margin-top: 0;
+				width: 19.6vmax;
+				height: 19.6vmax;
+
+				.button-text {
+					font-size: 4.3vmax;
+				}
 			}
 		}
 	}
@@ -169,6 +176,10 @@ body {
 		width: 100%;
 		height: 42%;
 		color: @white;
+
+		&.full-height {
+			height: 100%;
+		}
 
 		.social-content {
 			display: table-cell;
