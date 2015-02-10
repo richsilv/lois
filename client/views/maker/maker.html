@@ -1,0 +1,54 @@
+<template name="Maker">
+
+	<div class="top-section">
+
+		<div class="top-spacer">
+
+		</div>
+
+		<div class="top-menu">
+			<div class="slashes"><i class="icon-lois-slashes"></i></div>
+
+			<div class="menu-items">
+				<div class="left item">shop</div>
+				<div class="right item">makers</div>
+			</div>
+
+			<div class="centered-button white">
+				<div class="button-text">L O I S</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="container top-space">
+		<div class="icon-section">
+			<div class="maker-icon">
+				<div class="avatar-container">
+					<div class="avatar" style="background-image: url('{{avatar}}')"></div>
+				</div>
+				<div class="name">{{name}}</div>
+			</div>
+		</div>
+
+		<div class="video-section">
+			<video controls>
+			  <source src="videos/cat-video.mp4" type="video/mp4">
+			  <source src="videos/cat-video.webm" type="video/webm">
+			  <source src="videos/cat-video.ogv" type="video/ogg">
+			  Your browser does not support the <code>video</code> element.
+			</video>
+		</div>
+
+		<div class="blurb-section">
+			<p>
+				{{description}}
+				<img class="image one" src={{imageOne}}>
+				<img class="image two" src={{imageTwo}}>
+				<img class="image three" src={{imageThree}}>
+			</p>
+		</div>
+	</div>
+
+</template>
