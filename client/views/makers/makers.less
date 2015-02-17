@@ -1,6 +1,8 @@
 /*****************************************************************************/
 /* Makers: Style */
 /*****************************************************************************/
+@import "../../../flexbox-prefixer";
+
 @grid-width: 1170px;
 @text-color: #dadada;
 
@@ -12,14 +14,14 @@
 	margin-right: auto;
 	margin-left: auto;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	.flex-wrap(wrap);
+	.justify-content(center);
 
 }
 
 .maker-icon {
 
-	flex-basis: 20%;
+	.flex-basis(20%);
 	min-width: 100px;
 	padding-left: 2.2vmax;
 	padding-right: 2.2vmax;
